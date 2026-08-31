@@ -144,6 +144,9 @@ exclude_lines = [
 # catching meaningful regressions.
 fail_under = 75
 
+[tool.vercel]
+entrypoint = "api/index.py"
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]

@@ -1,0 +1,4 @@
+pikepdf>=10,<11
+fonttools>=4.60.2,<5
+pdfminer.six>=20251230
+lxml>=6.1.0,<7
