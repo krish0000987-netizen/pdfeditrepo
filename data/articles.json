@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "Format-Preserving PDF Editing: Under the Hood",
+    "slug": "format-preserving-pdf-editing",
+    "excerpt": "How content-stream surgery keeps fonts and layout intact — no redaction, no re-render.",
+    "content": "<p>Most PDF tools redact and re-insert text with a substitute font. <strong>pdf-edit-engine</strong> modifies content-stream operators in-place, preserving the original font subset and layout.</p><p>In this article we walk through BT/ET blocks, Identity-H CMap handling, and the two-tier font extension (CMap-only + Tier 1.5 glyph injection).</p><h3>Why it matters</h3><ul><li>Original font kept — no Helvetica fallback</li><li>Operator-level precision — exact positioning</li><li>Every edit returns a FidelityReport</li></ul><p>Try the live editor above to see it in action.</p>",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=80",
+    "category": "Engineering",
+    "author": "pdf-edit-engine Team",
+    "date": "2026-08-30",
+    "published": true
+  },
+  {
+    "id": "2",
+    "title": "Building a Mobile-Friendly Article System on Vercel",
+    "slug": "mobile-friendly-articles",
+    "excerpt": "From upload to render — making the admin panel and article pages work flawlessly on every screen size.",
+    "content": "<p>Mobile traffic is 60%+ — article pages must be fast, readable, and image-perfect on any device.</p><p>We rebuilt the frontend with Tailwind, responsive grids, and fluid images so every article uploaded in the admin panel renders correctly on mobile without extra work.</p><h3>Checklist</h3><ul><li>Responsive grid (1 → 2 → 3 cols)</li><li>Images with object-cover and aspect ratio</li><li>Admin preview matches public render</li></ul>",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=80",
+    "category": "Product",
+    "author": "Admin",
+    "date": "2026-08-29",
+    "published": true
+  },
+  {
+    "id": "3",
+    "title": "Handling Fonts: Subset Extension Without Corruption",
+    "slug": "font-subset-extension",
+    "excerpt": "Why the old retain-gids strategy corrupted text and how Tier 1.5 in-place injection fixes it.",
+    "content": "<p>Embedded font subsets are tricky — extending them naively renumbers CIDs and corrupts unrelated text. Our pipeline uses a CMap-only fast path when glyphs already exist, otherwise injects outlines in-place with fontTools while preserving every existing CID→GID mapping.</p>",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&auto=format&fit=crop&q=80",
+    "category": "Deep Dive",
+    "author": "Aryan B V",
+    "date": "2026-08-28",
+    "published": true
+  }
+]
